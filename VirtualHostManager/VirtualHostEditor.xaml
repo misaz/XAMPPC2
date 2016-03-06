@@ -1,0 +1,70 @@
+﻿<Window x:Class="VirtualHostEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VirtualHostManager"
+        mc:Ignorable="d"
+        Title="VirtualHost Editor" 
+		Width="650"
+		Height="520" 
+		Closing="Window_Closing" Icon="xampp-logo.png"
+		>
+    <Grid Margin="10">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto" />
+			<RowDefinition Height="auto" />
+			<RowDefinition Height="auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="100" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+
+		<!-- Labels -->
+		<TextBlock
+			Grid.Row="0" 
+			Grid.Column="0" 
+			VerticalAlignment="Center">Virtuální doména</TextBlock>
+		<TextBlock 
+			Grid.Row="1" 
+			Grid.Column="0" 
+			VerticalAlignment="Center">Složka se soubory</TextBlock>
+		<TextBlock 
+			Grid.Row="2" 
+			Grid.Column="0">Konfigurace složky</TextBlock>
+		<TextBlock 
+			Grid.Row="3" 
+			Grid.Column="0">Náhled</TextBlock>
+
+		<TextBox 
+			Grid.Row="0" 
+			Grid.Column="1" 
+			Margin="3,3,114,3"
+			Text="{Binding Domain, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+		<TextBox 
+			Grid.Row="1" 
+			Grid.Column="1" 
+			Margin="3"
+			Text="{Binding DirectoryPath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+		<local:PropertyBlockEditor 
+			Grid.Row="2"
+			Grid.Column="1"
+			Height="180"
+			x:Name="directoryConfig"/>
+		<TextBox 
+			Grid.Row="3" 
+			Grid.Column="1" 
+			Margin="3" 
+			IsReadOnly="true"
+			x:Name="outThumb"
+			Text="{Binding OutputThumbnail}" Background="#FFE2E2E2"/>
+		<TextBlock 
+			Grid.Column="1" 
+			HorizontalAlignment="Right" 
+			VerticalAlignment="Center" Margin="0,0,10,0">
+			(např.: eshop.local)
+		</TextBlock>
+	</Grid>
+</Window>

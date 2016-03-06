@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="ToogleButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:XAMPPC2"
+             mc:Ignorable="d">
+    <Grid Background="Transparent" MouseDown="Switch">
+        <Border  x:Name="tooglerBackground" Background="#FFFFC6C6" CornerRadius="15">
+            <Border BorderBrush="Black" BorderThickness="3" CornerRadius="15">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                    </Grid.ColumnDefinitions>
+                    <Viewbox x:Name="tooglerViewbox" VerticalAlignment="Top" HorizontalAlignment="Left" RenderTransformOrigin="0.174,0.382">
+                        <Grid x:Name="toogler" HorizontalAlignment="Right">
+                            <Border CornerRadius="100000000">
+                                <Border x:Name="tooglerBorder" BorderBrush="red" BorderThickness="1" CornerRadius="12"/>
+                            </Border>
+                        </Grid>
+                    </Viewbox>
+                </Grid>
+
+
+
+            </Border>
+        </Border>
+        <!--<Button x:Name="toogler" Background="#FFFF8383" Grid.Column="0" BorderBrush="Red" BorderThickness="3" Click="Switch" />-->
+    </Grid>
+</UserControl>

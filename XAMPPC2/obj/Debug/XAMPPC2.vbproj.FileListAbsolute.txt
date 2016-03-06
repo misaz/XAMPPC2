@@ -1,0 +1,80 @@
+C:\Users\michal\AppData\Local\Temporary Projects\XAMPPC2\bin\Debug\XAMPPC2.exe.config
+C:\Users\michal\AppData\Local\Temporary Projects\XAMPPC2\bin\Debug\XAMPPC2.exe
+C:\Users\michal\AppData\Local\Temporary Projects\XAMPPC2\bin\Debug\XAMPPC2.pdb
+C:\Users\michal\AppData\Local\Temporary Projects\XAMPPC2\bin\Debug\XAMPPC2.xml
+C:\Users\michal\AppData\Local\Temporary Projects\XAMPPC2\obj\Debug\XAMPPC2.vbprojResolveAssemblyReference.cache
+C:\Users\michal\AppData\Local\Temporary Projects\XAMPPC2\obj\Debug\MainWindow.g.vb
+C:\Users\michal\AppData\Local\Temporary Projects\XAMPPC2\obj\Debug\Application.g.vb
+C:\Users\michal\AppData\Local\Temporary Projects\XAMPPC2\obj\Debug\XAMPPC2_MarkupCompile.cache
+C:\Users\michal\AppData\Local\Temporary Projects\XAMPPC2\obj\Debug\XAMPPC2_MarkupCompile.lref
+C:\Users\michal\AppData\Local\Temporary Projects\XAMPPC2\obj\Debug\MainWindow.baml
+C:\Users\michal\AppData\Local\Temporary Projects\XAMPPC2\obj\Debug\XAMPPC2.g.resources
+C:\Users\michal\AppData\Local\Temporary Projects\XAMPPC2\obj\Debug\XAMPPC2.Resources.resources
+C:\Users\michal\AppData\Local\Temporary Projects\XAMPPC2\obj\Debug\XAMPPC2.vbproj.GenerateResource.Cache
+C:\Users\michal\AppData\Local\Temporary Projects\XAMPPC2\obj\Debug\XAMPPC2.exe
+C:\Users\michal\AppData\Local\Temporary Projects\XAMPPC2\obj\Debug\XAMPPC2.xml
+C:\Users\michal\AppData\Local\Temporary Projects\XAMPPC2\obj\Debug\XAMPPC2.pdb
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\bin\Debug\XAMPPC2.exe.config
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\bin\Debug\XAMPPC2.exe
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\bin\Debug\XAMPPC2.pdb
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\bin\Debug\XAMPPC2.xml
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\obj\Debug\XAMPPC2.vbprojResolveAssemblyReference.cache
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\obj\Debug\Controls\ServiceControl\ServiceControl.g.vb
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\obj\Debug\Controls\ToogleButton\ToogleButton.g.vb
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\obj\Debug\Controls\ToolHyperlink\ToolHyperlink.g.vb
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\obj\Debug\MainWindow.g.vb
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\obj\Debug\Application.g.vb
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\obj\Debug\GeneratedInternalTypeHelper.g.vb
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\obj\Debug\XAMPPC2_MarkupCompile.cache
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\obj\Debug\XAMPPC2_MarkupCompile.lref
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\obj\Debug\Controls\ServiceControl\ServiceControl.baml
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\obj\Debug\Controls\ToogleButton\ToogleButton.baml
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\obj\Debug\Controls\ToolHyperlink\ToolHyperlink.baml
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\obj\Debug\MainWindow.baml
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\obj\Debug\XAMPPC2.g.resources
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\obj\Debug\XAMPPC2.Resources.resources
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\obj\Debug\XAMPPC2.vbproj.GenerateResource.Cache
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\obj\Debug\XAMPPC2.exe
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\obj\Debug\XAMPPC2.xml
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\obj\Debug\XAMPPC2.pdb
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\obj\Debug\Controls\ProgressDialog\ProgressDialog.g.vb
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\obj\Debug\Controls\ProgressDialog\ProgressDialog.baml
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\bin\Debug\WpfWindowTools.dll
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\bin\Debug\WpfWindowTools.pdb
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\obj\Debug\Controls\ErrorDialog\ErrorDialog.g.vb
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\obj\Debug\Controls\ErrorDialog\ErrorDialog.baml
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\bin\Debug\Netstat.exe
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\bin\Debug\Netstat.pdb
+D:\Projects\_Desktop\_Sample\XAMPPC2\XAMPPC2\bin\Debug\Netstat.xml
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\bin\Debug\XAMPPC2.exe.config
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\obj\Debug\XAMPPC2.exe
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\obj\Debug\XAMPPC2.xml
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\obj\Debug\XAMPPC2.pdb
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\bin\Debug\XAMPPC2.exe
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\bin\Debug\XAMPPC2.pdb
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\bin\Debug\XAMPPC2.xml
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\bin\Debug\Netstat.exe
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\bin\Debug\WpfWindowTools.dll
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\bin\Debug\Netstat.pdb
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\bin\Debug\Netstat.xml
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\bin\Debug\WpfWindowTools.pdb
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\obj\Debug\XAMPPC2.vbprojResolveAssemblyReference.cache
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\obj\Debug\Controls\ErrorDialog\ErrorDialog.g.vb
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\obj\Debug\Controls\ProgressDialog\ProgressDialog.g.vb
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\obj\Debug\Controls\ServiceControl\ServiceControl.g.vb
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\obj\Debug\Controls\ToogleButton\ToogleButton.g.vb
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\obj\Debug\Controls\ToolHyperlink\ToolHyperlink.g.vb
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\obj\Debug\MainWindow.g.vb
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\obj\Debug\Application.g.vb
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\obj\Debug\GeneratedInternalTypeHelper.g.vb
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\obj\Debug\XAMPPC2_MarkupCompile.cache
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\obj\Debug\XAMPPC2_MarkupCompile.lref
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\obj\Debug\Controls\ErrorDialog\ErrorDialog.baml
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\obj\Debug\Controls\ProgressDialog\ProgressDialog.baml
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\obj\Debug\Controls\ServiceControl\ServiceControl.baml
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\obj\Debug\Controls\ToogleButton\ToogleButton.baml
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\obj\Debug\Controls\ToolHyperlink\ToolHyperlink.baml
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\obj\Debug\MainWindow.baml
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\obj\Debug\XAMPPC2.g.resources
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\obj\Debug\XAMPPC2.Resources.resources
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\XAMPPC2\obj\Debug\XAMPPC2.vbproj.GenerateResource.Cache

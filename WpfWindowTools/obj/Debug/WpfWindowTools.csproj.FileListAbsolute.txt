@@ -1,0 +1,9 @@
+D:\Projects\_Desktop\_Sample\XAMPPC2\WpfWindowTools\bin\Debug\WpfWindowTools.dll
+D:\Projects\_Desktop\_Sample\XAMPPC2\WpfWindowTools\bin\Debug\WpfWindowTools.pdb
+D:\Projects\_Desktop\_Sample\XAMPPC2\WpfWindowTools\obj\Debug\WpfWindowTools.dll
+D:\Projects\_Desktop\_Sample\XAMPPC2\WpfWindowTools\obj\Debug\WpfWindowTools.pdb
+D:\Projects\_Desktop\_Sample\XAMPPC2\WpfWindowTools\obj\Debug\WpfWindowTools.csprojResolveAssemblyReference.cache
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\WpfWindowTools\bin\Debug\WpfWindowTools.dll
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\WpfWindowTools\bin\Debug\WpfWindowTools.pdb
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\WpfWindowTools\obj\Debug\WpfWindowTools.dll
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\WpfWindowTools\obj\Debug\WpfWindowTools.pdb

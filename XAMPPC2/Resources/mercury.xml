@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<ServiceTools>
+	<ConfigurationFiles>
+		<Config Title="MERCURY.INI" Source="%xamppdir%\MercuryMail\MERCURY.INI"/>
+	</ConfigurationFiles>
+
+	<LogFiles>
+	</LogFiles>
+
+	<WebApplications>
+	</WebApplications>
+</ServiceTools>

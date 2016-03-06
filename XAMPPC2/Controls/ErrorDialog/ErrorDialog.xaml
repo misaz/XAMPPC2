@@ -1,0 +1,91 @@
+﻿<Window x:Class="ErrorDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XAMPPC2"
+        mc:Ignorable="d"
+        Title="Chyba" Height="300" Width="476" Icon="/XAMPPC2;component/Assets/xampp-logo.png">
+	<Grid Background="#FFFFF9F9">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="auto" />
+		</Grid.RowDefinitions>
+
+		<Grid Margin="10,10,10,10">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="auto" />
+				<ColumnDefinition Width="auto" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+
+			<Grid Width="48" Height="48">
+				<Image Width="32" Height="32" Name="ErrorImage" />
+			</Grid>
+
+			<Border CornerRadius="5" Grid.Column="1" Height="48" Width="48">
+				<Image Name="ServiceImage" Source="{Binding Image}" Width="32" Height="32" Margin="5,5,5,5"/>
+			</Border>
+
+			<TextBlock 
+				Grid.Column="2" 
+				TextWrapping="Wrap" 
+				Margin="10,0"
+			>
+				Při spouštění procesu <TextBlock Text="{Binding ProcessName}"></TextBlock> došlo k neočekaváné chybě a proces byl neočekávaně ukončen. <LineBreak /><LineBreak />
+				Vrácený kód: <TextBlock Text="{Binding ResponseCode}"></TextBlock>
+				
+			</TextBlock>
+		</Grid>
+
+		<ListView ItemsSource="{Binding Errors}" Margin="10, 5" Grid.Row="1">
+			<ListView.View>
+				<GridView AllowsColumnReorder="false">
+					<GridViewColumn Header="Kód chyby" Width="75" DisplayMemberBinding="{Binding Path=Code}" />
+					<GridViewColumn Header="Popis chyby" Width="300" DisplayMemberBinding="{Binding Path=Description}" />
+					<GridViewColumn Header="" Width="50">
+						<GridViewColumn.CellTemplate>
+							<DataTemplate>
+								<Button Background="#FFF7F7F7" Click="Google_Click" Tag="{Binding RawProcessOutput}">
+									<Image Height="12" Source="/XAMPPC2;component/Assets/google.png" />
+								</Button>
+							</DataTemplate>
+						</GridViewColumn.CellTemplate>
+					</GridViewColumn>
+				</GridView>
+			</ListView.View>
+			
+		</ListView>
+		
+		<Grid Grid.Row="2" Margin="10, 0, 10,10">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="auto" />
+				<ColumnDefinition Width="auto" />
+			</Grid.ColumnDefinitions>
+			
+			<Button
+				VerticalAlignment="Center" 
+				HorizontalAlignment="Right" 
+				MinWidth="75" 
+				Grid.Column="1"
+				Margin="3 0"
+				Click="RestartProcess_Click"
+				Visibility="{Binding DisplayRestartProcess}"
+			>
+				Restartovat
+			</Button>
+			<Button 
+				VerticalAlignment="Center" 
+				HorizontalAlignment="Right"
+				MinWidth="75"
+				Grid.Column="2" 
+				Margin="3 0"
+				Click="OK_Click"
+			>
+				OK
+			</Button>
+		</Grid>
+	</Grid>
+</Window>

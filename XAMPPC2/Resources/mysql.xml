@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<ServiceTools>
+	<ConfigurationFiles>
+		<Config Title="MySQL (my.ini)" Source="%xamppdir%\mysql\bin\my.ini"/>
+	</ConfigurationFiles>
+
+	<LogFiles>
+		<Log Title="MySQL (mysql_error.log)" Source="%xamppdir%\mysql\data\mysql_error.log" />
+	</LogFiles>
+
+	<WebApplications>
+		<WebApp Title="phpMyAdmin" Address="http://localhost/phpmyadmin" />
+	</WebApplications>
+</ServiceTools>

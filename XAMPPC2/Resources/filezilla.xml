@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<ServiceTools>
+	<ConfigurationFiles>
+		<Config Title="FileZilla Server.xml" Source="%xamppdir%\FileZillaFTP\FileZilla Server.xml"/>
+	</ConfigurationFiles>
+
+	<LogFiles>
+	</LogFiles>
+
+	<WebApplications>
+		<WebApp Title="Správa serveru" Address="%xamppdir%\filezillaftp\filezilla server interface.exe" />
+	</WebApplications>
+</ServiceTools>

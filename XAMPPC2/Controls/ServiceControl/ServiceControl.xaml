@@ -1,0 +1,92 @@
+﻿<UserControl x:Class="ServiceControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:XAMPPC2"
+             mc:Ignorable="d" d:DesignWidth="114.667" d:DesignHeight="136.667" Margin="5,0,5,0">
+    <UserControl.Resources>
+        <ContextMenu x:Key="itemMenu">
+            <MenuItem Header="Config" x:Name="ConfigMenuItems">
+                <MenuItem.Items>
+                </MenuItem.Items>
+            </MenuItem>
+            <MenuItem Header="Logs" x:Name="LogMenuItems">
+                <MenuItem.Items>
+                </MenuItem.Items>
+            </MenuItem>
+			<MenuItem 
+				Tag="{Binding AdministrationLink}" 
+				IsEnabled="{Binding DisplayAdministrationLink}" 
+				Header="Administrace" 
+				Click="MenuItem_Click" 
+				MouseDoubleClick="MenuItem_Click"></MenuItem>
+            <Separator IsEnabled="{Binding VisibleServiceTool}"></Separator>
+            <MenuItem 
+                Header="Run as Windows Service" 
+                IsCheckable="True" 
+                IsEnabled="{Binding VisibleServiceTool}" 
+				IsChecked="{Binding IsServiceInstalled}"
+                Click="RunAsWindowsService" 
+            ></MenuItem>
+        </ContextMenu>
+
+        <ControlTemplate x:Key="ButtonTemplate" TargetType="{x:Type Button}">
+            <Border x:Name="border" 
+			Background="{TemplateBinding Background}" 
+			SnapsToDevicePixels="True"
+			Padding="10">
+                <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            </Border>
+            <!--<ControlTemplate.Triggers>
+                <Trigger Property="IsDefaulted" Value="True">
+                    <Setter Property="Background" Value="#FFD6D6D6" />
+                    <Setter Property="BorderBrush" TargetName="border" Value="lightBlue"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" TargetName="border" Value="#FFBEE6FD"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="#FF3C7FB1"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" TargetName="border" Value="#FFC4E5F6"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="#FF2C628B"/>
+                </Trigger>
+                <Trigger Property="ToggleButton.IsChecked" Value="True">
+                    <Setter Property="Background" TargetName="border" Value="#FFBCDDEE"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="#FF245A83"/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" TargetName="border" Value="#FFFF8383"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="#FFADB2B5"/>
+                    <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#FF838383"/>
+                </Trigger>
+            </ControlTemplate.Triggers>-->
+        </ControlTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+		<Button IsEnabled="{Binding IsServiceRegisteredBool}" x:Name="btnTogler" Grid.Row="1" Template="{StaticResource ButtonTemplate}" Background="#FFEAEAEA" ContextMenu="{StaticResource itemMenu}">
+			<Button.ToolTip>
+				<ToolTip Visibility="{Binding ShowPortsAndPidsTooltip}">
+					<StackPanel>
+						<TextBlock>Ports: <TextBlock Text="{Binding Ports}"></TextBlock></TextBlock>
+						<TextBlock>PIDs: <TextBlock Text="{Binding Pids}"></TextBlock></TextBlock>
+					</StackPanel>
+				</ToolTip>
+			</Button.ToolTip>
+			<Image Source="{Binding Thumb}" />
+        </Button>
+        <Grid Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Right">
+			<Button Visibility="{Binding IsServiceRegistered}" x:Name="btnConfig" Content="" FontFamily="Segoe UI Symbol" Width="19" Height="19" ContextMenu="{StaticResource itemMenu}"/>
+        </Grid>
+        <local:ToogleButton Visibility="{Binding IsServiceRegistered}" x:Name="tgl" Grid.Row="3" Margin="18,3,18,1"/>
+
+    </Grid>
+
+</UserControl>

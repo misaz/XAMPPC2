@@ -1,0 +1,58 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ServiceStarter
+</name>
+</assembly>
+<members>
+<member name="M:ServiceStarter.Module1.Main">
+ <summary>
+ Správce služeb Windows
+ </summary>
+</member>
+<member name="M:ServiceStarter.Module1.help">
+ <summary>
+ Vypíše nápovědu
+ </summary>
+</member>
+<member name="M:ServiceStarter.Module1.ProcessOther(System.Collections.Generic.List{System.String})">
+ <summary>
+ Spustí proces a počká na jeho dokončení
+ </summary>
+ <param name="args">argumenty spouštění</param>
+</member>
+<member name="M:ServiceStarter.Module1.StartOrStopService(System.Collections.Generic.List{System.String})">
+ <summary>
+ Spustí nebo zastaví službu WIndows
+ </summary>
+ <param name="args"></param>
+</member>
+<member name="M:ServiceStarter.Module1.RequireAdmin">
+ <summary>
+ Zkontroluje a případně požádá o zvýšení uživatelských oprávnění
+ </summary>
+</member>
+<member name="M:ServiceStarter.Module1.IsAdmin">
+ <summary>
+ Vrátí zdali uživatel pod kterým je aplikace spuštěná naléží do interní role Administrator
+ </summary>
+</member>
+<member name="T:ServiceStarter.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:ServiceStarter.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:ServiceStarter.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+</members>
+</doc>

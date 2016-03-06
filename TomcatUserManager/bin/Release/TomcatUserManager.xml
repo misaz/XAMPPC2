@@ -1,0 +1,384 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+TomcatUserManager
+</name>
+</assembly>
+<members>
+<member name="T:TomcatUserManager.Comment">
+ <summary>
+ Komentář v souboru konfigurace
+ </summary>
+</member>
+<member name="T:TomcatUserManager.ITomcatAccessItem">
+ <summary>
+ Funkce položky, která by se mohla oběvit ve výstupu
+ </summary>
+</member>
+<member name="M:TomcatUserManager.ITomcatAccessItem.GetElement">
+ <summary>
+ Vrátí svoji reprezentaci XML elementem, použitým do vstupu/výstupu
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:TomcatUserManager.RoleEditor.Role">
+ <summary>
+ Upravována role
+ </summary>
+</member>
+<member name="P:TomcatUserManager.RoleEditor.SavedRole">
+ <summary>
+ Naposledy uložená role, podle te se rozhoduje zdali došlo ke změnám
+ </summary>
+</member>
+<member name="M:TomcatUserManager.RoleEditor.Save_Click(System.Object,System.Windows.RoutedEventArgs)">
+ <summary>
+ Uloží roli
+ </summary>
+ <param name="sender">Reserved</param>
+ <param name="e">Reserved</param>
+</member>
+<member name="M:TomcatUserManager.RoleEditor.Window_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+ <summary>
+ Zkontroluje změny
+ </summary>
+ <param name="sender">Reserved</param>
+ <param name="e">Reserved</param>
+</member>
+<member name="M:TomcatUserManager.RoleEditor.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:TomcatUserManager.TomcatRole">
+ <summary>
+ Role serveru tomcat
+ </summary>
+</member>
+<member name="P:TomcatUserManager.TomcatRole.Element">
+ <summary>
+ XML element reprezentující roli
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:TomcatUserManager.TomcatRole.#ctor(System.Xml.XmlElement)">
+ <summary>
+ inicializace Role z elementu
+ </summary>
+ <param name="element">XML element</param>
+</member>
+<member name="M:TomcatUserManager.TomcatRole.#ctor(System.String)">
+ <summary>
+ vytvoření nové role podle jména
+ </summary>
+ <param name="name"></param>
+</member>
+<member name="P:TomcatUserManager.TomcatRole.Name">
+ <summary>
+ Jméno role
+ </summary>
+</member>
+<member name="P:TomcatUserManager.TomcatRole.Thumbnail">
+ <summary>
+ piktogram role
+ </summary>
+</member>
+<member name="M:TomcatUserManager.TomcatRole.Clone">
+ <summary>
+ naklonuje roli
+ </summary>
+</member>
+<member name="M:TomcatUserManager.TomcatRole.op_Equality(TomcatUserManager.TomcatRole,TomcatUserManager.TomcatRole)">
+ <summary>
+ porovná role
+ </summary>
+ <param name="x1">Role 1</param>
+ <param name="x2">Role 2</param>
+ <returns></returns>
+</member>
+<member name="M:TomcatUserManager.TomcatRole.GetElement">
+ <summary>
+ Vrátí XMl element reprezentující roli
+ </summary>
+ <returns></returns>
+</member>
+<member name="T:TomcatUserManager.TomcatUser">
+ <summary>
+ Uživatel serveru tomcat
+ </summary>
+</member>
+<member name="P:TomcatUserManager.TomcatUser.Element">
+ <summary>
+ XML element reprezentující uživatele
+ </summary>
+</member>
+<member name="M:TomcatUserManager.TomcatUser.#ctor(System.Xml.XmlElement)">
+ <summary>
+ inicializuje uživatele z XML elementu
+ </summary>
+ <param name="element"></param>
+</member>
+<member name="M:TomcatUserManager.TomcatUser.#ctor(System.String,System.String,System.String)">
+ <summary>
+ vytvoří uživatele podle jména, hesla a jeho rolí
+ </summary>
+</member>
+<member name="P:TomcatUserManager.TomcatUser.Name">
+ <summary>
+ Jméno uživatele
+ </summary>
+</member>
+<member name="P:TomcatUserManager.TomcatUser.Password">
+ <summary>
+ Heslo uživatele
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:TomcatUserManager.TomcatUser.Role">
+ <summary>
+ Role do kterých uživatel patří
+ </summary>
+</member>
+<member name="P:TomcatUserManager.TomcatUser.Thumbnail">
+ <summary>
+ Vrátí piktogram uživatele
+ </summary>
+</member>
+<member name="M:TomcatUserManager.TomcatUser.Clone">
+ <summary>
+ naklonuje uživatele
+ </summary>
+</member>
+<member name="M:TomcatUserManager.TomcatUser.GetElement">
+ <summary>
+ Vrátí XML element reprezentující uživatele
+ </summary>
+</member>
+<member name="T:TomcatUserManager.TomcatUserManager">
+ <summary>
+ Správce uživatelů tomcat
+ </summary>
+</member>
+<member name="F:TomcatUserManager.TomcatUserManager.fileName">
+ <summary>
+ jméno souboru
+ </summary>
+</member>
+<member name="F:TomcatUserManager.TomcatUserManager.items">
+ <summary>
+ položky 
+ </summary>
+</member>
+<member name="M:TomcatUserManager.TomcatUserManager.#ctor(System.String)">
+ <summary>
+ načte správce podle souboru
+ </summary>
+ <param name="fileName"></param>
+</member>
+<member name="M:TomcatUserManager.TomcatUserManager.Parse">
+ <summary>
+ naparsuje spravované prvky
+ </summary>
+</member>
+<member name="M:TomcatUserManager.TomcatUserManager.Save">
+ <summary>
+ Uloží změny do souboru
+ </summary>
+</member>
+<member name="P:TomcatUserManager.UserEditor.User">
+ <summary>
+ upravovaný uživatel
+ </summary>
+</member>
+<member name="P:TomcatUserManager.UserEditor.SavedUser">
+ <summary>
+ Naposledy uložený uživatel
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:TomcatUserManager.UserEditor.#ctor(TomcatUserManager.TomcatUser)">
+ <summary>
+ Vytvoří editor uživatele
+ </summary>
+ <param name="u">upravovaný uživatel</param>
+</member>
+<member name="M:TomcatUserManager.UserEditor.Save_Click(System.Object,System.Windows.RoutedEventArgs)">
+ <summary>
+ Uloží uživatele
+ </summary>
+ <param name="sender">Reserved</param>
+ <param name="e">Reserved</param>
+</member>
+<member name="M:TomcatUserManager.UserEditor.Window_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+ <summary>
+ Obsluha události zavření okna
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:TomcatUserManager.UserEditor.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:TomcatUserManager.Application">
+<summary>
+Application
+</summary>
+</member>
+<member name="M:TomcatUserManager.Application.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="M:TomcatUserManager.Application.Main">
+<summary>
+Application Entry Point.
+</summary>
+</member>
+<member name="T:TomcatUserManager.ItemKind">
+ <summary>
+ Typ položky, které se v konfiguraci mohou vyskytovat
+ </summary>
+</member>
+<member name="T:TomcatUserManager.MainWindow">
+<summary>
+MainWindow
+</summary>
+</member>
+<member name="F:TomcatUserManager.MainWindow.manager">
+ <summary>
+ Správce uživatelů tomcat
+ </summary>
+</member>
+<member name="F:TomcatUserManager.MainWindow.changed">
+ <summary>
+ informace o tom, zdali byly data změněna a je je pře zavřením formuláře třeba uložit
+ </summary>
+</member>
+<member name="P:TomcatUserManager.MainWindow.TomcatItems">
+ <summary>
+ Získá sprqavované položky
+ </summary>
+</member>
+<member name="P:TomcatUserManager.MainWindow.EnableDelete">
+ <summary>
+ Určuje zdali se zaktivuje odstraňvoací tlačítko
+ nastavení libovolné hodnoty do proměnné provede aktualizaci stavu tlačítka
+ </summary>
+</member>
+<member name="M:TomcatUserManager.MainWindow.#ctor">
+ <summary>
+ Připraví okno
+ </summary>
+</member>
+<member name="M:TomcatUserManager.MainWindow.ListView_MouseDoubleClick(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+ <summary>
+ Otevře editor položky
+ </summary>
+ <param name="sender">Reserved</param>
+ <param name="e">Reserved</param>
+</member>
+<member name="M:TomcatUserManager.MainWindow.UpdateItems">
+ <summary>
+ Aktualizuje seznam položek
+ </summary>
+</member>
+<member name="M:TomcatUserManager.MainWindow.AddUser_Click(System.Object,System.Windows.RoutedEventArgs)">
+ <summary>
+ Přidá nového uživatele a otevře okno editoru
+ </summary>
+ <param name="sender">Reserved</param>
+ <param name="e">Reserved</param>
+</member>
+<member name="M:TomcatUserManager.MainWindow.AddRole_Click(System.Object,System.Windows.RoutedEventArgs)">
+ <summary>
+ Přidá novou roli a otevbře okno editoru
+ </summary>
+ <param name="sender">Reserved</param>
+ <param name="e">Reserved</param>
+</member>
+<member name="M:TomcatUserManager.MainWindow.viewItems_Selected(System.Object,System.Windows.RoutedEventArgs)">
+ <summary>
+ uživatel vybral jinou polžku
+ </summary>
+ <param name="sender">Reserved</param>
+ <param name="e">Reserved</param>
+</member>
+<member name="M:TomcatUserManager.MainWindow.Delete_Click(System.Object,System.Windows.RoutedEventArgs)">
+ <summary>
+ Odstraní vybranou položku
+ </summary>
+ <param name="sender">Reserved</param>
+ <param name="e">Reserved</param>
+</member>
+<member name="M:TomcatUserManager.MainWindow.Save_Click(System.Object,System.Windows.RoutedEventArgs)">
+ <summary>
+ Uloží změny
+ </summary>
+ <param name="sender">Reserved</param>
+ <param name="e">Reserved</param>
+</member>
+<member name="M:TomcatUserManager.MainWindow.Window_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+ <summary>
+ Obslouží zavření okna
+ </summary>
+ <param name="sender">Reserved</param>
+ <param name="e">Reserved</param>
+</member>
+<member name="M:TomcatUserManager.MainWindow.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:TomcatUserManager.My.MyWpfExtension">
+ <summary>
+ Module used to define the properties that are available in the My Namespace for WPF
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:TomcatUserManager.My.MyWpfExtension.Application">
+ <summary>
+ Returns the application object for the running application
+ </summary>
+</member>
+<member name="P:TomcatUserManager.My.MyWpfExtension.Computer">
+ <summary>
+ Returns information about the host computer.
+ </summary>
+</member>
+<member name="P:TomcatUserManager.My.MyWpfExtension.User">
+ <summary>
+ Returns information for the current user.  If you wish to run the application with the current 
+ Windows user credentials, call My.User.InitializeWithWindowsUser().
+ </summary>
+</member>
+<member name="P:TomcatUserManager.My.MyWpfExtension.Log">
+ <summary>
+ Returns the application log. The listeners can be configured by the application's configuration file.
+ </summary>
+</member>
+<member name="P:TomcatUserManager.My.MyWpfExtension.Windows">
+ <summary>
+ Returns the collection of Windows defined in the project.
+ </summary>
+</member>
+<member name="T:TomcatUserManager.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:TomcatUserManager.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:TomcatUserManager.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+</members>
+</doc>

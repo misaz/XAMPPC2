@@ -1,0 +1,29 @@
+﻿<Window x:Class="RoleEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TomcatUserManager"
+        mc:Ignorable="d"
+		Closing="Window_Closing"
+        Title="Editor role" Height="120" Width="300" Icon="Assets/group.png">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*" />
+			<RowDefinition Height="auto" />
+		</Grid.RowDefinitions>
+		<StackPanel Grid.Row="0">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="100" />
+					<ColumnDefinition Width="*" />
+				</Grid.ColumnDefinitions>
+				<Label MinWidth="100">Název</Label>
+				<TextBox Grid.Column="1" MinWidth="150" Margin="5" Text="{Binding Role.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+			</Grid>
+		</StackPanel>
+		<DockPanel Grid.Row="1" Margin="5">
+			<Button Width="78" HorizontalAlignment="Right" Click="Save_Click">Uložit</Button>
+		</DockPanel>
+	</Grid>
+</Window>

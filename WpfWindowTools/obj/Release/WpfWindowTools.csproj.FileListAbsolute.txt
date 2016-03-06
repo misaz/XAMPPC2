@@ -1,0 +1,8 @@
+D:\Projects\_Desktop\_Sample\XAMPPC2\WpfWindowTools\bin\Release\WpfWindowTools.dll
+D:\Projects\_Desktop\_Sample\XAMPPC2\WpfWindowTools\bin\Release\WpfWindowTools.pdb
+D:\Projects\_Desktop\_Sample\XAMPPC2\WpfWindowTools\obj\Release\WpfWindowTools.dll
+D:\Projects\_Desktop\_Sample\XAMPPC2\WpfWindowTools\obj\Release\WpfWindowTools.pdb
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\WpfWindowTools\bin\Release\WpfWindowTools.dll
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\WpfWindowTools\bin\Release\WpfWindowTools.pdb
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\WpfWindowTools\obj\Release\WpfWindowTools.dll
+D:\Projects\_Desktop\_VisualBasic\XAMPPC2\WpfWindowTools\obj\Release\WpfWindowTools.pdb

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<ServiceTools>
+	<ConfigurationFiles>
+		<Config Title="Apache (httpd.conf)" Source="%xamppdir%\apache\conf\httpd.conf"/>
+		<Config Title="Apache (httpd-ssl.conf)" Source="%xamppdir%\apache\conf\extra\httpd-ssl.conf"/>
+		<Config Title="Apache (httpd-xampp.conf)" Source="%xamppdir%\apache\conf\extra\httpd-xampp.conf"/>
+		<Config Title="PHP (php.ini)" Source="%xamppdir%\php\php.ini"/>
+		<Config Title="phpMyAdmin (config.inc.php)" Source="%xamppdir%\phpMyAdmin\config.inc.php"/>
+	</ConfigurationFiles>
+
+	<LogFiles>
+		<Log Title="Apache (access.log)" Source="%xamppdir%\apache\logs\access.log" />
+		<Log Title="Apache (error.log)" Source="%xamppdir%\apache\logs\error.log" />
+		<Log Title="PHP (php_error_log)" Source="%xamppdir%\php\logs\php_error_log" />
+	</LogFiles>
+
+	<WebApplications>
+		<WebApp Title="administrace localhostu" Address="http://localhost" />
+	</WebApplications>
+</ServiceTools>

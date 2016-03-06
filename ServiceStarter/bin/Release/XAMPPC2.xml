@@ -1,0 +1,940 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+XAMPPC2
+</name>
+</assembly>
+<members>
+<member name="T:XAMPPC2.Xampp.Config">
+ <summary>
+ Konfigurace ovládacího panelu
+ </summary>
+</member>
+<member name="F:XAMPPC2.Xampp.Config.path">
+ <summary>
+ Cesta k balíku XAMPP
+ </summary>
+</member>
+<member name="F:XAMPPC2.Xampp.Config.serviceStarterPath">
+ <summary>
+ Cesta k startovací službě
+ </summary>
+</member>
+<member name="T:XAMPPC2.Xampp.XamppControlpanelVersionMiner">
+ <summary>
+ Stará se o verzi nového ovládacího panelu XAMPP
+ </summary>
+</member>
+<member name="M:XAMPPC2.Xampp.XamppControlpanelVersionMiner.GetVersion">
+ <summary>
+ Vrátí verzi ovládacího panelu
+ </summary>
+</member>
+<member name="T:XAMPPC2.ProcessError">
+ <summary>
+ Reperezentuje chybu vzniklou v některém z procesů serverů
+ </summary>
+</member>
+<member name="P:XAMPPC2.ProcessError.Code">
+ <summary>
+ Kód chyby
+ </summary>
+</member>
+<member name="P:XAMPPC2.ProcessError.Description">
+ <summary>
+ Popis chyby
+ </summary>
+</member>
+<member name="P:XAMPPC2.ProcessError.RawProcessOutput">
+ <summary>
+ Výstup z procesu
+ </summary>
+</member>
+<member name="M:XAMPPC2.ProcessError.#ctor(System.String)">
+ <summary>
+ Vytvoří instanci chyby v procesu. Předaný výstup z púroceusu je zároveň popiskem chyby, kód chyby se zanedbává.
+ </summary>
+ <param name="message"></param>
+</member>
+<member name="P:XAMPPC2.ErrorDialog.ProcessName">
+ <summary>
+ Jméno chybujícího procesu
+ </summary>
+</member>
+<member name="P:XAMPPC2.ErrorDialog.ResponseCode">
+ <summary>
+ Návratový kód procesu
+ </summary>
+</member>
+<member name="P:XAMPPC2.ErrorDialog.Errors">
+ <summary>
+ Vzniklé chyby
+ </summary>
+</member>
+<member name="P:XAMPPC2.ErrorDialog.Image">
+ <summary>
+ Obrázek Procesu
+ </summary>
+</member>
+<member name="P:XAMPPC2.ErrorDialog.RestartProcess">
+ <summary>
+ Akce, která se zavolá, když uživatel vyžádá restart chybujícího serveru
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:XAMPPC2.ErrorDialog.DisplayRestartProcess">
+ <summary>
+ Nastavuje zdali se zobrazí tlačítko pro zobrazení procesu
+ </summary>
+</member>
+<member name="M:XAMPPC2.ErrorDialog.#ctor(System.String,System.Diagnostics.Process,System.Collections.Generic.List{System.String},System.Windows.Media.ImageSource)">
+ <summary>
+ Incializuje nové okno
+ </summary>
+ <param name="processName">jméno havarovaného procesu</param>
+ <param name="process">havarovaný proces (může být Nothing)</param>
+ <param name="errors">seznam navrácených chyb</param>
+ <param name="image">ikona serveru</param>
+</member>
+<member name="M:XAMPPC2.ErrorDialog.#ctor(System.String,System.Diagnostics.Process,System.String,System.Windows.Media.ImageSource)">
+ <summary>
+ Inicializuje nové okno, chyby rozparsuje ze System.String
+ </summary>
+ <param name="processName">jméno havarovaného programu</param>
+ <param name="process">hovarovaný proces</param>
+ <param name="output">výstup havarovaného procesu</param>
+ <param name="image">ikona serveru</param>
+</member>
+<member name="M:XAMPPC2.ErrorDialog.ErrorDialog_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+ <summary>
+ Obsluha události načtení formuláře, pokud neobsahuje žádné chyby okamžitě jej zavře.
+ </summary>
+ <param name="sender">Reserved</param>
+ <param name="e">Reserved</param>
+</member>
+<member name="M:XAMPPC2.ErrorDialog.Google_Click(System.Object,System.Windows.RoutedEventArgs)">
+ <summary>
+ Oblusha události kliknutí na tlačítko Google, otevře webový prohlížeč s hledáním chyby na http://google.com
+ </summary>
+ <param name="sender">zdroj události</param>
+ <param name="e">Reserved</param>
+</member>
+<member name="M:XAMPPC2.ErrorDialog.OK_Click(System.Object,System.Windows.RoutedEventArgs)">
+ <summary>
+ Obsluha kliknutí potvrzovacího tlačítka
+ </summary>
+ <param name="sender">Reserved</param>
+ <param name="e">Reserved</param>
+</member>
+<member name="M:XAMPPC2.ErrorDialog.RestartProcess_Click(System.Object,System.Windows.RoutedEventArgs)">
+ <summary>
+ Vyvolá restart procesu
+ </summary>
+ <param name="sender">Reserved</param>
+ <param name="e">Reserved</param>
+</member>
+<member name="M:XAMPPC2.ErrorDialog.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="P:XAMPPC2.ProgressDialog.Image">
+ <summary>
+ Ikona programu
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:XAMPPC2.ProgressDialog.Label">
+ <summary>
+ Popisek probíhající akce
+ </summary>
+ <returns></returns>
+</member>
+<member name="F:XAMPPC2.ProgressDialog.proc">
+ <summary>
+ Sledovaný proces
+ </summary>
+</member>
+<member name="M:XAMPPC2.ProgressDialog.#ctor(System.String,System.Windows.Media.Imaging.BitmapImage,System.Diagnostics.Process)">
+ <summary>
+ Inicializuje okno
+ </summary>
+ <param name="label">Popsiek probíhající akce</param>
+ <param name="image">Ikona běžícího programu</param>
+ <param name="process">Sledovaný proces</param>
+</member>
+<member name="M:XAMPPC2.ProgressDialog.handleProcess">
+ <summary>
+ spustí sledovaný proces, čeká na jeho ukončení, zajistí aby okno graficky jenom neprobliklo
+ </summary>
+</member>
+<member name="M:XAMPPC2.ProgressDialog.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+ <summary>
+ Obsluha načtení okna, nastaví oknu WinAPI flagy, spustí sledovaný proces
+ </summary>
+ <param name="sender">Reserved</param>
+ <param name="e">Reserved</param>
+</member>
+<member name="M:XAMPPC2.ProgressDialog.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:XAMPPC2.Config">
+ <summary>
+ Konfigurační soubor
+ </summary>
+</member>
+<member name="P:XAMPPC2.Config.Title">
+ <summary>
+ Titulek konfiguračního souboru
+ </summary>
+</member>
+<member name="P:XAMPPC2.Config.Source">
+ <summary>
+ Cesta ke konfiguračnímu souboru
+ </summary>
+</member>
+<member name="M:XAMPPC2.Config.DeserializeObject(System.Xml.XmlElement)">
+ <summary>
+ Načte konfigurační soubor z XML elementu Config
+ </summary>
+ <param name="el">element</param>
+ <returns>naparsovaný konfigurační soubor</returns>
+</member>
+<member name="P:XAMPPC2.ToolHyperlink.Label">
+ <summary>
+ Popisek odkazu
+ </summary>
+</member>
+<member name="P:XAMPPC2.ToolHyperlink.Program">
+ <summary>
+ Cestak k programu na který odkaz odkazuje
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:XAMPPC2.ToolHyperlink.Thumbnail">
+ <summary>
+ Ikona programu, ikona se načítá dynamicky z exe apikace na kterou odkaz odkazuje
+ </summary>
+</member>
+<member name="M:XAMPPC2.ToolHyperlink.Hyperlink_RequestNavigate(System.Object,System.Windows.Navigation.RequestNavigateEventArgs)">
+ <summary>
+ Obsluha události požadavku o spuštění odkazovaného programu
+ </summary>
+ <param name="sender">Zdroj události</param>
+ <param name="e">Objekt události</param>
+</member>
+<member name="M:XAMPPC2.ToolHyperlink.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:XAMPPC2.ApacheService">
+ <summary>
+ Ovladač serveru apache
+ </summary>
+</member>
+<member name="F:XAMPPC2.ApacheService.previousState">
+ <summary>
+ Předchozí stav serveru, slouží k porovnávání, zda došlo ke změně
+ </summary>
+</member>
+<member name="F:XAMPPC2.ApacheService._timerChecker">
+ <summary>
+ Časovač, který kontroluje změnu stavu
+ </summary>
+</member>
+<member name="F:XAMPPC2.ApacheService.control">
+ <summary>
+ Tačítko ovládající server
+ </summary>
+</member>
+<member name="F:XAMPPC2.ApacheService.serviceName">
+ <summary>
+ Jméno serveru
+ </summary>
+</member>
+<member name="F:XAMPPC2.ApacheService.servicePicture">
+ <summary>
+ Ikona serveru
+ </summary>
+</member>
+<member name="F:XAMPPC2.ApacheService.processName">
+ <summary>
+ Jméno procesu serveru
+ </summary>
+</member>
+<member name="F:XAMPPC2.ApacheService.processPath">
+ <summary>
+ Cesta k procesu serveru
+ </summary>
+</member>
+<member name="F:XAMPPC2.ApacheService.serviceInstallParam">
+ <summary>
+ Argument příkazového řádku předáváný při registraci serveru jako službu Windows
+ </summary>
+</member>
+<member name="F:XAMPPC2.ApacheService.serviceUninstallParam">
+ <summary>
+ Argument příkazového řádku předávaný při odinstalace služby Windows
+ </summary>
+</member>
+<member name="F:XAMPPC2.ApacheService.watchingProceses">
+ <summary>
+ Procesy, které služba zpracovává
+ </summary>
+</member>
+<member name="F:XAMPPC2.ApacheService.startParams">
+ <summary>
+ Parametr předáváný procesu při startu serveru
+ </summary>
+</member>
+<member name="F:XAMPPC2.ApacheService.allowedExitCodes">
+ <summary>
+ Návratové kódy, které nejsou považovaný za chyby
+ </summary>
+</member>
+<member name="M:XAMPPC2.ApacheService.#ctor(XAMPPC2.ServiceControl)">
+ <summary>
+ Vytvoří instanci správce serveru Apache
+ </summary>
+ <param name="c">ovládací tlačítko</param>
+</member>
+<member name="M:XAMPPC2.ApacheService.GetVersion">
+ <summary>
+ Vrátí verzi neinstalovaného serveru Apache
+ </summary>
+</member>
+<member name="M:XAMPPC2.ApacheService.StateSwitchRequest">
+ <summary>
+ Přepne stav serveru
+ </summary>
+</member>
+<member name="M:XAMPPC2.ApacheService.CheckState">
+ <summary>
+ Ověří stav serveru
+ </summary>
+</member>
+<member name="M:XAMPPC2.ApacheService.CheckProcessesState">
+ <summary>
+ Zkontroluje a ověří zdali nehavaroval některý ze sledovaných procesů
+ </summary>
+</member>
+<member name="M:XAMPPC2.ApacheService.HandleProcessFail(System.Diagnostics.Process)">
+ <summary>
+ Ověří stav ukončeného procesu, zdali nedošlo k chybě v procesu
+ </summary>
+ <param name="p">ověřovaný proces</param>
+</member>
+<member name="M:XAMPPC2.ApacheService.StopService">
+ <summary>
+ Zastaví server
+ </summary>
+</member>
+<member name="M:XAMPPC2.ApacheService.StartService">
+ <summary>
+ Spustí server
+ </summary>
+</member>
+<member name="M:XAMPPC2.ApacheService.GetProceses">
+ <summary>
+ Vrátí procesy serveru
+ </summary>
+</member>
+<member name="M:XAMPPC2.ApacheService.GetState">
+ <summary>
+ Vrátí aktuální stav serveru
+ </summary>
+</member>
+<member name="M:XAMPPC2.ApacheService.CanStartAsWindowsService">
+ <summary>
+ Vrátí pravdivostní hodnotu, zdali server může být spuštěn jako služba Windows
+ </summary>
+</member>
+<member name="M:XAMPPC2.ApacheService.InstallService">
+ <summary>
+ Nainstaluje server jako službu Windows
+ </summary>
+</member>
+<member name="M:XAMPPC2.ApacheService.UninstallService">
+ <summary>
+ Odinstaluje službu Windows příslušného serveru
+ </summary>
+</member>
+<member name="M:XAMPPC2.ApacheService.IsServiceInstalled">
+ <summary>
+ Zjistí jestli je server nainstalovaný jako služba Windows
+ </summary>
+</member>
+<member name="M:XAMPPC2.ApacheService.GetUsedPorts">
+ <summary>
+ Získá seznam portů na kterých server poslouchá
+ </summary>
+</member>
+<member name="M:XAMPPC2.ApacheService.GetUsedPids">
+ <summary>
+ Získá ID procesů serveru
+ </summary>
+</member>
+<member name="M:XAMPPC2.ApacheService.IsInstalled">
+ <summary>
+ Zjistí jestli je server v balíku XAMPP vůbec správně nainstalovaný
+ </summary>
+</member>
+<member name="T:XAMPPC2.FileZillaService">
+ <summary>
+ Ovldač serveru filezilla
+ </summary>
+</member>
+<member name="M:XAMPPC2.FileZillaService.HandleProcessFail(System.Diagnostics.Process)">
+ <summary>
+ (ne)Obsluha chyb spadnutí
+ </summary>
+ <param name="p"></param>
+</member>
+<member name="M:XAMPPC2.FileZillaService.GetVersion">
+ <summary>
+ Získá verzi nainstalovaného serveru
+ </summary>
+</member>
+<member name="T:XAMPPC2.IService">
+ <summary>
+ Reoprezentuje správce serveru
+ </summary>
+</member>
+<member name="E:XAMPPC2.IService.StateChanged">
+ <summary>
+ Změnil se stav serveru
+ </summary>
+ <param name="sender">Zdroj události</param>
+ <param name="e">parametry události</param>
+</member>
+<member name="M:XAMPPC2.IService.StateSwitchRequest">
+ <summary>
+ Požadavek o přepnutí serveru do jiného stavu
+ </summary>
+</member>
+<member name="M:XAMPPC2.IService.GetState">
+ <summary>
+ Vrátí aktuální stav serveru
+ </summary>
+</member>
+<member name="M:XAMPPC2.IService.CanStartAsWindowsService">
+ <summary>
+ Vráti zdali server může být nainstalován jako služba Windows
+ </summary>
+</member>
+<member name="M:XAMPPC2.IService.InstallService">
+ <summary>
+ Nainstaluje službu Windows
+ </summary>
+</member>
+<member name="M:XAMPPC2.IService.UninstallService">
+ <summary>
+ odinstaluje službu Windows
+ </summary>
+</member>
+<member name="M:XAMPPC2.IService.IsServiceInstalled">
+ <summary>
+ Vrátí informaci o tom, zdali je server naisntalován jako služba Windows
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:XAMPPC2.IService.GetUsedPorts">
+ <summary>
+ Vrátí seznam portů na kterých server poslouchá
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:XAMPPC2.IService.GetUsedPids">
+ <summary>
+ Vrátí ID procesů serveru
+ </summary>
+</member>
+<member name="M:XAMPPC2.IService.IsInstalled">
+ <summary>
+ Vrátí zdali je server nainstalován
+ </summary>
+</member>
+<member name="T:XAMPPC2.IVersionMiner">
+ <summary>
+ Umí vydolovat verzi k nějaké službě
+ </summary>
+</member>
+<member name="M:XAMPPC2.IVersionMiner.GetVersion">
+ <summary>
+ Vrátí verzi služby
+ </summary>
+</member>
+<member name="T:XAMPPC2.MariaService">
+ <summary>
+ Ovladač server MariaDB
+ </summary>
+</member>
+<member name="M:XAMPPC2.MariaService.GetVersion">
+ <summary>
+ Získá verzi MariaDB serveru
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:XAMPPC2.MariaService.HandleProcessFail(System.Diagnostics.Process)">
+ <summary>
+ Obslouží pád procesu
+ </summary>
+ <param name="p"></param>
+</member>
+<member name="M:XAMPPC2.MercuryService.CanStartAsWindowsService">
+ <summary>
+ Vrátí informaci o tom, zdali lze server nainstalovat jako službu Windows
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:XAMPPC2.MercuryService.StartService">
+ <summary>
+ Spustí server
+ </summary>
+</member>
+<member name="T:XAMPPC2.PhpMyAdminVersionMiner">
+ <summary>
+ Umí získat verzi phpMyAdmin
+ </summary>
+</member>
+<member name="F:XAMPPC2.PhpMyAdminVersionMiner.filePath">
+ <summary>
+ Cesta k souboru, kde se verze nachází
+ </summary>
+</member>
+<member name="M:XAMPPC2.PhpMyAdminVersionMiner.GetVersion">
+ <summary>
+ Vrátí verzi phpMyAdmin
+ </summary>
+</member>
+<member name="T:XAMPPC2.PhpVersionMiner">
+ <summary>
+ Umí zjistit verzi PHP
+ </summary>
+</member>
+<member name="F:XAMPPC2.PhpVersionMiner.processPath">
+ <summary>
+ cesta k procesu PHP
+ </summary>
+</member>
+<member name="M:XAMPPC2.PhpVersionMiner.GetVersion">
+ <summary>
+ Zjistí verzi PHP
+ </summary>
+</member>
+<member name="T:XAMPPC2.ServiceState">
+ <summary>
+ Stavy serveru
+ </summary>
+</member>
+<member name="F:XAMPPC2.ServiceState.Running">
+ <summary>
+ Server běží a poslouchá na alespoň jednom portu
+ </summary>
+</member>
+<member name="F:XAMPPC2.ServiceState.Starting">
+ <summary>
+ Server běží, ale neposlouchá na žádném portu
+ </summary>
+</member>
+<member name="F:XAMPPC2.ServiceState.Stoped">
+ <summary>
+ Server neběží
+ </summary>
+</member>
+<member name="T:XAMPPC2.Application">
+<summary>
+Application
+</summary>
+</member>
+<member name="M:XAMPPC2.Application.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="M:XAMPPC2.Application.Main">
+<summary>
+Application Entry Point.
+</summary>
+</member>
+<member name="P:XAMPPC2.ServiceControl.Thumbnail">
+ <summary>
+ Cesta k ikoně serveru
+ </summary>
+</member>
+<member name="P:XAMPPC2.ServiceControl.Source">
+ <summary>
+ Zdroj dat kontextové nabídky
+ </summary>
+</member>
+<member name="P:XAMPPC2.ServiceControl.Thumb">
+ <summary>
+ Ikona serveru, nastavuje se přes vlastnost Thumbnail
+ </summary>
+</member>
+<member name="P:XAMPPC2.ServiceControl.VisibleServiceTool">
+ <summary>
+ Vrací pravdivostní hodnotu podle toho zda jde server instalovat jako službu Windows
+ </summary>
+</member>
+<member name="P:XAMPPC2.ServiceControl.IsServiceRegisteredBool">
+ <summary>
+ Vrací pravdivostní hodnotu zdali je server v složce XAMPP fyzicky nainstalovaný
+ </summary>
+</member>
+<member name="P:XAMPPC2.ServiceControl.IsServiceRegistered">
+ <summary>
+ Vrací Visiblity.Visible nebo Hidden podle toho zdali je server v složce XAMPP fyzicky nainstalovaný
+ </summary>
+</member>
+<member name="P:XAMPPC2.ServiceControl.Pids">
+ <summary>
+ ID procesů serveru v textové podobě
+ </summary>
+</member>
+<member name="P:XAMPPC2.ServiceControl.Ports">
+ <summary>
+ Porty na kterých server poslouchá v textové podbě
+ </summary>
+</member>
+<member name="P:XAMPPC2.ServiceControl.ShowPortsAndPidsTooltip">
+ <summary>
+ Vrací Visibility.Visible nebo Hidden podle toho, zdali server běží
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:XAMPPC2.ServiceControl.Service">
+ <summary>
+ Obsluhovaná služba
+ </summary>
+</member>
+<member name="P:XAMPPC2.ServiceControl.IsServiceInstalled">
+ <summary>
+ Vrací pravdivostní hodnotu podle toho zdali je server nainstalován jako služba Windows
+ </summary>
+</member>
+<member name="P:XAMPPC2.ServiceControl.AdministrationLink">
+ <summary>
+ Cesta/URL k administraci serveru
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:XAMPPC2.ServiceControl.DisplayAdministrationLink">
+ <summary>
+ Vrací pravdivostní hodnotu, zdali se má zobrazovat tlačítko adminsitrace serveru
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:XAMPPC2.ServiceControl.#ctor">
+ <summary>
+ Vytvoří novou instanci prvku
+ </summary>
+</member>
+<member name="M:XAMPPC2.ServiceControl.LoadServerContextMenu">
+ <summary>
+ Načte kontextovou nabídku možností serveru
+ </summary>
+ <remarks>kontextové menu je součástí Resources formuláře</remarks>
+</member>
+<member name="M:XAMPPC2.ServiceControl.tgl_Toogle(System.Object,System.EventArgs)">
+ <summary>
+ Vyžádá přepnutí stavu serveru
+ </summary>
+ <param name="sender">Reserved</param>
+ <param name="e">Reserved</param>
+</member>
+<member name="M:XAMPPC2.ServiceControl.btnConfig_Click(System.Object,System.Windows.RoutedEventArgs)">
+ <summary>
+ Otevře kontextové menu na tlačítku
+ </summary>
+ <param name="sender">Reserved</param>
+ <param name="e">Reserved</param>
+</member>
+<member name="F:XAMPPC2.ServiceControl.portAndPidChecker">
+ <summary>
+ Vlákno obsluhující ověřování ID procesů serveru a portů na kterých server poslouchá
+ </summary>
+</member>
+<member name="M:XAMPPC2.ServiceControl.ProcessStateChange">
+ <summary>
+ Zpracuje změny stavu serveru
+ </summary>
+</member>
+<member name="M:XAMPPC2.ServiceControl.CheckPortAndPid">
+ <summary>
+ Zjistí změny ID procesů serveru a porty na kterých server poslouchá, 
+ vygeneruje je v uživatelské přívětivé textové podobě
+ </summary>
+</member>
+<member name="M:XAMPPC2.ServiceControl.MenuItem_Click(System.Object,System.EventArgs)">
+ <summary>
+ Obsluha kliknutí tlačítka kontextového menu
+ </summary>
+ <param name="sender">zdroj události (tlačítko menu)</param>
+ <param name="e">Reserved</param>
+</member>
+<member name="M:XAMPPC2.ServiceControl.RunAsWindowsService(System.Windows.Controls.MenuItem,System.Windows.RoutedEventArgs)">
+ <summary>
+ nainstaluje/odinstaluje server jako službu WIndows
+ </summary>
+ <param name="sender">zdroj události (tlačítko menu)</param>
+ <param name="e">Reserved</param>
+</member>
+<member name="M:XAMPPC2.ServiceControl.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="E:XAMPPC2.ToogleButton.Toogle">
+ <summary>
+ Událost volána při změně stavu stlačítka
+ </summary>
+ <param name="sender">Zdroj události</param>
+ <param name="e">Parametry události</param>
+</member>
+<member name="M:XAMPPC2.ToogleButton.Button_Click(System.Object,System.Windows.RoutedEventArgs)">
+ <summary>
+ Kliknutí na tlačítko, Přepne stav
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:XAMPPC2.ToogleButton.Switch">
+ <summary>
+ Přepne stav tlačítka
+ </summary>
+</member>
+<member name="P:XAMPPC2.ToogleButton.IsToogled">
+ <summary>
+ Informace zdali je tlačítko ve stavu On
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:XAMPPC2.ToogleButton.SetToogle(System.Boolean)">
+ <summary>
+ Nastavuje hodnotu tlačítka v GUI
+ </summary>
+ <param name="value">Hodnota tlačítka</param>
+</member>
+<member name="M:XAMPPC2.ToogleButton.RefreshColors">
+ <summary>
+ Zaktualizuje barvu pozadí tlačítka
+ </summary>
+</member>
+<member name="M:XAMPPC2.ToogleButton.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:XAMPPC2.JavaNotFoundException">
+ <summary>
+ Vyjimka v případě absence či porušené instalaci Javy
+ </summary>
+</member>
+<member name="T:XAMPPC2.TomcatService">
+ <summary>
+ Ovladač serveru Tomcat
+ </summary>
+</member>
+<member name="M:XAMPPC2.TomcatService.HandleProcessFail(System.Diagnostics.Process)">
+ <summary>
+ Obsloužení pádu serveru
+ </summary>
+ <param name="p"></param>
+</member>
+<member name="M:XAMPPC2.TomcatService.GetVersion">
+ <summary>
+ Vrátí verzi serveru Tomcat
+ </summary>
+</member>
+<member name="M:XAMPPC2.TomcatService.GetProceses">
+ <summary>
+ Vrátí procesy serveru
+ </summary>
+</member>
+<member name="M:XAMPPC2.TomcatService.StartService">
+ <summary>
+ Spustí server
+ </summary>
+</member>
+<member name="M:XAMPPC2.TomcatService.GetJavaExePath">
+ <summary>
+ Vrátí cestu k java.exe
+ </summary>
+</member>
+<member name="M:XAMPPC2.TomcatService.GetTomcatParams">
+ <summary>
+ Vrátí parametry pro spuštění tomcatu
+ </summary>
+</member>
+<member name="M:XAMPPC2.TomcatService.ExistsJavaHome">
+ <summary>
+ Vrátí jestli je v systému zaregistrována cesta k Javě
+ </summary>
+</member>
+<member name="M:XAMPPC2.TomcatService.ExistsJreHome">
+ <summary>
+ Vrátí jestli je v systému zaregistrována cesta k JRE
+ </summary>
+</member>
+<member name="M:XAMPPC2.TomcatService.ExistsCatalinaHome">
+ <summary>
+ Vrátí jestli je v systému zaregistrována cesta k Catalina
+ </summary>
+</member>
+<member name="M:XAMPPC2.TomcatService.IsInstalled">
+ <summary>
+ Vrátí zdali jsou server a všechny ptořebné závislosti nainstalovány
+ </summary>
+</member>
+<member name="T:XAMPPC2.VersionUnknownException">
+ <summary>
+ nepodařilo se zjistit verzi
+ </summary>
+</member>
+<member name="T:XAMPPC2.MainWindow">
+<summary>
+MainWindow
+</summary>
+</member>
+<member name="M:XAMPPC2.MainWindow.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:XAMPPC2.My.MyWpfExtension">
+ <summary>
+ Module used to define the properties that are available in the My Namespace for WPF
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:XAMPPC2.My.MyWpfExtension.Application">
+ <summary>
+ Returns the application object for the running application
+ </summary>
+</member>
+<member name="P:XAMPPC2.My.MyWpfExtension.Computer">
+ <summary>
+ Returns information about the host computer.
+ </summary>
+</member>
+<member name="P:XAMPPC2.My.MyWpfExtension.User">
+ <summary>
+ Returns information for the current user.  If you wish to run the application with the current 
+ Windows user credentials, call My.User.InitializeWithWindowsUser().
+ </summary>
+</member>
+<member name="P:XAMPPC2.My.MyWpfExtension.Log">
+ <summary>
+ Returns the application log. The listeners can be configured by the application's configuration file.
+ </summary>
+</member>
+<member name="P:XAMPPC2.My.MyWpfExtension.Windows">
+ <summary>
+ Returns the collection of Windows defined in the project.
+ </summary>
+</member>
+<member name="T:XAMPPC2.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:XAMPPC2.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:XAMPPC2.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:XAMPPC2.My.Resources.Resources.apache">
+<summary>
+  Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt; 
+&lt;ServiceTools&gt;
+	&lt;ConfigurationFiles&gt;
+		&lt;Config Title=&quot;Apache (httpd.conf)&quot; Source=&quot;%xamppdir%\apache\conf\httpd.conf&quot;/&gt;
+		&lt;Config Title=&quot;Apache (httpd-ssl.conf)&quot; Source=&quot;%xamppdir%\apache\conf\extra\httpd-ssl.conf&quot;/&gt;
+		&lt;Config Title=&quot;Apache (httpd-xampp.conf)&quot; Source=&quot;%xamppdir%\apache\conf\extra\httpd-xampp.conf&quot;/&gt;
+		&lt;Config Title=&quot;PHP (php.ini)&quot; Source=&quot;%xamppdir%\php\php.ini&quot;/&gt;
+		&lt;Config Title=&quot;phpMyAdmin (config.inc.php)&quot; Source=&quot;%xamppdir%\phpMyAdmin\conf [rest of string was truncated]&quot;;.
+</summary>
+</member>
+<member name="P:XAMPPC2.My.Resources.Resources.filezilla">
+<summary>
+  Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt; 
+&lt;ServiceTools&gt;
+	&lt;ConfigurationFiles&gt;
+		&lt;Config Title=&quot;FileZilla Server.xml&quot; Source=&quot;%xamppdir%\FileZillaFTP\FileZilla Server.xml&quot;/&gt;
+	&lt;/ConfigurationFiles&gt;
+
+	&lt;LogFiles&gt;
+	&lt;/LogFiles&gt;
+
+	&lt;WebApplications&gt;
+		&lt;WebApp Title=&quot;Správa serveru&quot; Address=&quot;%xamppdir%\filezillaftp\filezilla server interface.exe&quot; /&gt;
+	&lt;/WebApplications&gt;
+&lt;/ServiceTools&gt;.
+</summary>
+</member>
+<member name="P:XAMPPC2.My.Resources.Resources.mercury">
+<summary>
+  Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt; 
+&lt;ServiceTools&gt;
+	&lt;ConfigurationFiles&gt;
+		&lt;Config Title=&quot;MERCURY.INI&quot; Source=&quot;%xamppdir%\MercuryMail\MERCURY.INI&quot;/&gt;
+	&lt;/ConfigurationFiles&gt;
+
+	&lt;LogFiles&gt;
+	&lt;/LogFiles&gt;
+
+	&lt;WebApplications&gt;
+	&lt;/WebApplications&gt;
+&lt;/ServiceTools&gt;.
+</summary>
+</member>
+<member name="P:XAMPPC2.My.Resources.Resources.mysql">
+<summary>
+  Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt; 
+&lt;ServiceTools&gt;
+	&lt;ConfigurationFiles&gt;
+		&lt;Config Title=&quot;MySQL (my.ini)&quot; Source=&quot;%xamppdir%\mysql\bin\my.ini&quot;/&gt;
+	&lt;/ConfigurationFiles&gt;
+
+	&lt;LogFiles&gt;
+		&lt;Log Title=&quot;MySQL (mysql_error.log)&quot; Source=&quot;%xamppdir%\mysql\data\mysql_error.log&quot; /&gt;
+	&lt;/LogFiles&gt;
+
+	&lt;WebApplications&gt;
+		&lt;WebApp Title=&quot;phpMyAdmin&quot; Address=&quot;http://localhost/phpmyadmin&quot; /&gt;
+	&lt;/WebApplications&gt;
+&lt;/ServiceTools&gt;.
+</summary>
+</member>
+<member name="P:XAMPPC2.My.Resources.Resources.tomcat">
+<summary>
+  Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt; 
+&lt;ServiceTools&gt;
+	&lt;ConfigurationFiles&gt;
+		&lt;Config Title=&quot;server.xml&quot; Source=&quot;%xamppdir%\tomcat\conf\server.xml&quot;/&gt;
+		&lt;Config Title=&quot;tomcat-users.xml&quot; Source=&quot;%xamppdir%\tomcat\conf\tomcat-users.xml&quot;/&gt;
+		&lt;Config Title=&quot;web.xml&quot; Source=&quot;%xamppdir%\tomcat\conf\web.xml&quot;/&gt;
+		&lt;Config Title=&quot;context.xml&quot; Source=&quot;%xamppdir%\tomcat\conf\context.xml&quot;/&gt;
+	&lt;/ConfigurationFiles&gt;
+
+	&lt;LogFiles&gt;
+	&lt;/LogFiles&gt;
+
+	&lt;WebApplications&gt;
+	&lt;/WebApplications&gt;
+&lt;/ServiceTools&gt;.
+</summary>
+</member>
+</members>
+</doc>

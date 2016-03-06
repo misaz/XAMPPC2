@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "XAMPPC2", "XAMPPC2\XAMPPC2.vbproj", "{5D4A4957-059F-4929-AE74-38DDB7DE55CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfWindowTools", "WpfWindowTools\WpfWindowTools.csproj", "{81E3D0CF-2DCD-435F-8947-932B25623538}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ServiceManager", "ServiceStarter\ServiceManager.vbproj", "{F838E24E-E88D-4F11-AE3D-0E2E7943456A}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Netstat", "Netstat\Netstat.vbproj", "{ACD2D00D-8C9F-4F11-9733-AAC28827C181}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TomcatUserManager", "TomcatUserManager\TomcatUserManager.vbproj", "{99C08E74-F9EA-48E7-A411-256A6BDA9BB1}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VirtualHostManager", "VirtualHostManager\VirtualHostManager.vbproj", "{67A24475-BDAD-470C-93E3-1A96BA68BE63}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "services.msc", "services.msc\services.msc.vbproj", "{04EC8068-B35C-4E6C-9EE1-18F4F17FC672}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D4A4957-059F-4929-AE74-38DDB7DE55CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D4A4957-059F-4929-AE74-38DDB7DE55CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D4A4957-059F-4929-AE74-38DDB7DE55CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D4A4957-059F-4929-AE74-38DDB7DE55CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81E3D0CF-2DCD-435F-8947-932B25623538}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81E3D0CF-2DCD-435F-8947-932B25623538}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81E3D0CF-2DCD-435F-8947-932B25623538}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81E3D0CF-2DCD-435F-8947-932B25623538}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F838E24E-E88D-4F11-AE3D-0E2E7943456A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F838E24E-E88D-4F11-AE3D-0E2E7943456A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F838E24E-E88D-4F11-AE3D-0E2E7943456A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F838E24E-E88D-4F11-AE3D-0E2E7943456A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACD2D00D-8C9F-4F11-9733-AAC28827C181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACD2D00D-8C9F-4F11-9733-AAC28827C181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACD2D00D-8C9F-4F11-9733-AAC28827C181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACD2D00D-8C9F-4F11-9733-AAC28827C181}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99C08E74-F9EA-48E7-A411-256A6BDA9BB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99C08E74-F9EA-48E7-A411-256A6BDA9BB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99C08E74-F9EA-48E7-A411-256A6BDA9BB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99C08E74-F9EA-48E7-A411-256A6BDA9BB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67A24475-BDAD-470C-93E3-1A96BA68BE63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67A24475-BDAD-470C-93E3-1A96BA68BE63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67A24475-BDAD-470C-93E3-1A96BA68BE63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67A24475-BDAD-470C-93E3-1A96BA68BE63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04EC8068-B35C-4E6C-9EE1-18F4F17FC672}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04EC8068-B35C-4E6C-9EE1-18F4F17FC672}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04EC8068-B35C-4E6C-9EE1-18F4F17FC672}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04EC8068-B35C-4E6C-9EE1-18F4F17FC672}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

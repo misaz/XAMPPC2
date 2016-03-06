@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<ServiceTools>
+	<ConfigurationFiles>
+		<Config Title="server.xml" Source="%xamppdir%\tomcat\conf\server.xml"/>
+		<Config Title="tomcat-users.xml" Source="%xamppdir%\tomcat\conf\tomcat-users.xml"/>
+		<Config Title="web.xml" Source="%xamppdir%\tomcat\conf\web.xml"/>
+		<Config Title="context.xml" Source="%xamppdir%\tomcat\conf\context.xml"/>
+	</ConfigurationFiles>
+
+	<LogFiles>
+	</LogFiles>
+
+	<WebApplications>
+	</WebApplications>
+</ServiceTools>

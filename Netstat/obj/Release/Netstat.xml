@@ -1,0 +1,284 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Netstat
+</name>
+</assembly>
+<members>
+<member name="T:Netstat.Netstat">
+ <summary>
+ Zjišťuje informace o síti
+ </summary>
+</member>
+<member name="M:Netstat.Netstat.GetExtendedTcpTable(System.Byte[],System.Int32@,System.Boolean,System.Int32,Netstat.Netstat.TCP_TABLE_CLASS,System.Int32)">
+ <summary>
+ <see href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa365928(v=vs.85).aspx"/>
+ </summary>
+</member>
+<member name="F:Netstat.Netstat.previousItems">
+ <summary>
+ Položky navrácené předchozím voláním
+ </summary>
+</member>
+<member name="F:Netstat.Netstat.tcpTableCache">
+ <summary>
+ cache TCP tabulky
+ </summary>
+</member>
+<member name="F:Netstat.Netstat.cached">
+ <summary>
+ Časová známky kde došlo k vytvoření cache.
+ </summary>
+</member>
+<member name="M:Netstat.Netstat.GetTcpTable">
+ <summary>
+ Vrátí buffer TCP tabulky
+ </summary>
+</member>
+<member name="M:Netstat.Netstat.ReadTcpTable">
+ <summary>
+ Přečte TCP tabulku, nepoužívá cache
+ </summary>
+</member>
+<member name="T:Netstat.Netstat.TCP_TABLE_CLASS">
+ <summary>
+ Možnosti požadavku o tabulku
+ </summary>
+</member>
+<member name="T:Netstat.Netstat.MIB_TCPTABLE_OWNER_PID">
+ <summary>
+ Tabulka TCP spojení
+ </summary>
+</member>
+<member name="F:Netstat.Netstat.MIB_TCPTABLE_OWNER_PID.dwNumEntries">
+ <summary>
+ Počet položek v tabulce
+ </summary>
+</member>
+<member name="F:Netstat.Netstat.MIB_TCPTABLE_OWNER_PID.table">
+ <summary>
+ Tabulka řádů dat
+ </summary>
+</member>
+<member name="T:Netstat.Netstat.MIB_TCPROW_OWNER_PID">
+ <summary>
+ Interpretace TCP spojení v tabulce
+ </summary>
+</member>
+<member name="F:Netstat.Netstat.MIB_TCPROW_OWNER_PID.dwState">
+ <summary>
+ Stav spojení
+ <see href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa366913(v=vs.85).aspx"/>
+ </summary>
+</member>
+<member name="F:Netstat.Netstat.MIB_TCPROW_OWNER_PID.Local">
+ <summary>
+ Klientská IP adresa na které klient poslouchá a vysílá
+ </summary>
+</member>
+<member name="F:Netstat.Netstat.MIB_TCPROW_OWNER_PID.Remote">
+ <summary>
+ Vzdálená IP adresa na kteroé vzdálený server poslouchá a vysílá z ni
+ </summary>
+</member>
+<member name="F:Netstat.Netstat.MIB_TCPROW_OWNER_PID.dwOwningPid">
+ <summary>
+ ID procesu obsluhující spojení
+ </summary>
+</member>
+<member name="M:Netstat.Netstat.GetListeningConnections">
+ <summary>
+ Vrátí TCP posluchače
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Netstat.Netstat.GetListeningProceses">
+ <summary>
+ Vrátí seznam portů na kterých poslouchá nějaký půroces
+ </summary>
+</member>
+<member name="M:Netstat.Netstat.GetPortsListenedbyPID(System.Int32)">
+ <summary>
+ Získá seznam portů na kterých poslouchá předaný proces
+ </summary>
+ <param name="pid">ID procesu u kterého se bude získávat na kterých portech poslouchá</param>
+ <returns>seznám portů</returns>
+</member>
+<member name="M:Netstat.Netstat.contains(System.Collections.Generic.List{Netstat.NetstatHandle},Netstat.NetstatHandle)">
+ <summary>
+ Zjistí zdali list výsledků netstat obsahuje položku
+ </summary>
+ <param name="list">List výstupu netstatu</param>
+ <param name="item">hledaná položka</param>
+</member>
+<member name="M:Netstat.Netstat.containsPrevious(Netstat.NetstatHandle)">
+ <summary>
+ Zjistí zdali předchozí vrácený výsledek obsahoval položku
+ </summary>
+ <param name="item">hledaná položka</param>
+</member>
+<member name="M:Netstat.Netstat.FindDad(Netstat.NetstatHandle)">
+ <summary>
+ Najde položku v předchozím výstupu
+ </summary>
+ <param name="item">hleadaná položka</param>
+ <returns></returns>
+</member>
+<member name="T:Netstat.NetstatException">
+ <summary>
+ Výjmka ke které může dojít při chybování služby netstatu
+ </summary>
+</member>
+<member name="T:Netstat.NetstatHandle">
+ <summary>
+ Výstup netstat
+ </summary>
+</member>
+<member name="P:Netstat.NetstatHandle.Address">
+ <summary>
+ Lokální adresa
+ </summary>
+</member>
+<member name="P:Netstat.NetstatHandle.Port">
+ <summary>
+ Lokální port
+ </summary>
+</member>
+<member name="P:Netstat.NetstatHandle.Pid">
+ <summary>
+ ID procesu, který obsluhuje spojení
+ </summary>
+</member>
+<member name="P:Netstat.NetstatHandle.ProcessName">
+ <summary>
+ Jméno procesu, který obsluhuje spojení
+ </summary>
+</member>
+<member name="P:Netstat.NetstatHandle.Started">
+ <summary>
+ Časové razítko o tom, kdy byl záznam netstatu poprvé spozorován
+ </summary>
+</member>
+<member name="P:Netstat.NetstatHandle.Closed">
+ <summary>
+ Časové razítko o tom, kdy byl záznam netstatu naposledy spozorován
+ </summary>
+</member>
+<member name="P:Netstat.NetstatHandle.IsNew">
+ <summary>
+ Informace o tom, zdali je záznam nově vznikly
+ </summary>
+</member>
+<member name="P:Netstat.NetstatHandle.IsOld">
+ <summary>
+ Informace o tom, zdali je záznam zaniklý
+ </summary>
+</member>
+<member name="T:Netstat.Application">
+<summary>
+Application
+</summary>
+</member>
+<member name="M:Netstat.Application.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="M:Netstat.Application.Main">
+<summary>
+Application Entry Point.
+</summary>
+</member>
+<member name="T:Netstat.MainWindow">
+<summary>
+MainWindow
+</summary>
+</member>
+<member name="P:Netstat.MainWindow.NetstatReponse">
+ <summary>
+ Výstup z knihovny Netstat
+ </summary>
+</member>
+<member name="F:Netstat.MainWindow._timer">
+ <summary>
+ Časovač pro aktualizaci seznamu
+ </summary>
+</member>
+<member name="F:Netstat.MainWindow.netstat">
+ <summary>
+ Netstat
+ </summary>
+</member>
+<member name="M:Netstat.MainWindow.RefreshNetstat">
+ <summary>
+ Aktualizuje netstat informace
+ </summary>
+</member>
+<member name="M:Netstat.MainWindow.RefreshNetstatInOtherThread">
+ <summary>
+ Spustí aktualizaci informací netstatu v novém vlákně
+ </summary>
+</member>
+<member name="M:Netstat.MainWindow.Window_SourceInitialized(System.Object,System.EventArgs)">
+ <summary>
+ Obsluha události načtení okna
+ </summary>
+ <param name="sender">Reserved</param>
+ <param name="e">Reserved</param>
+</member>
+<member name="M:Netstat.MainWindow.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:Netstat.My.MyWpfExtension">
+ <summary>
+ Module used to define the properties that are available in the My Namespace for WPF
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Netstat.My.MyWpfExtension.Application">
+ <summary>
+ Returns the application object for the running application
+ </summary>
+</member>
+<member name="P:Netstat.My.MyWpfExtension.Computer">
+ <summary>
+ Returns information about the host computer.
+ </summary>
+</member>
+<member name="P:Netstat.My.MyWpfExtension.User">
+ <summary>
+ Returns information for the current user.  If you wish to run the application with the current 
+ Windows user credentials, call My.User.InitializeWithWindowsUser().
+ </summary>
+</member>
+<member name="P:Netstat.My.MyWpfExtension.Log">
+ <summary>
+ Returns the application log. The listeners can be configured by the application's configuration file.
+ </summary>
+</member>
+<member name="P:Netstat.My.MyWpfExtension.Windows">
+ <summary>
+ Returns the collection of Windows defined in the project.
+ </summary>
+</member>
+<member name="T:Netstat.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Netstat.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Netstat.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+</members>
+</doc>

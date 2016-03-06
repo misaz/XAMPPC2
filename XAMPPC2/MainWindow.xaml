@@ -1,0 +1,102 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XAMPPC2"
+        mc:Ignorable="d"
+		x:Name="wnd"
+        Title="XAMPP Control Panel" 
+		Height="356" 
+		Width="525" 
+		ResizeMode="CanMinimize" 
+		Icon="Assets/xampp-logo.png"
+		>
+
+    <Grid Margin="10,10,10,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0" />
+                <ColumnDefinition Width="9*" />
+                <ColumnDefinition Width="0" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+				</Grid.ColumnDefinitions>
+                <local:ServiceControl x:Name="apache"  Grid.Column="0" Source="apache" Thumbnail="Assets/apache.png" />
+                <local:ServiceControl x:Name="mysql" Grid.Column="1" Source="mysql" Thumbnail="Assets/mariadb.png" />
+                <local:ServiceControl x:Name="filezilla" Grid.Column="2" Source="filezilla" Thumbnail="Assets/filezilla.png" />
+				<local:ServiceControl x:Name="tomcat" Grid.Column="3" Source="tomcat" Thumbnail="Assets/tomcat.png" />
+				<local:ServiceControl x:Name="mercury" Grid.Column="4" Source="mercury" Thumbnail="Assets/mercury.png" />
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1" Margin="0,15,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="277*" />
+                <ColumnDefinition Width="240*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Margin="10,0,0,3" FontSize="16">Užitečné nástroje</TextBlock>
+            <TextBlock Margin="10,0,0,3" FontSize="16" Grid.Column="1">Informace o verzi</TextBlock>
+            <StackPanel Grid.Row="1" Margin="10,0,10,0">
+                <local:ToolHyperlink Program="vhm.exe" Label="VirtualHost Manager" />
+                <!--<local:ToolHyperlink Program="foobar.exe" Label="php.ini Configuration Manager" />-->
+                <local:ToolHyperlink Program="netstat.exe" Label="Netstat" />
+				<local:ToolHyperlink Program="services.exe" Label="Služby systému Windows" />
+				<local:ToolHyperlink Program="tomcatusers.exe" Label="Správce uživatelů Tomcat" />
+            </StackPanel>
+            <Grid Grid.Row="1" Grid.Column="1" Margin="10,0,10,0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Column="0" Grid.Row="0" Margin="0,0,5,0">XAMPP Control Panel</TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="1">Apache</TextBlock>
+				<TextBlock Grid.Column="0" Grid.Row="2">PHP</TextBlock>
+				<TextBlock Grid.Column="0" Grid.Row="3">MariaDB</TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="4">phpMyAdmin</TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="5">FileZilla</TextBlock>
+				<TextBlock Grid.Column="0" Grid.Row="6">Tomcat</TextBlock>
+				<TextBlock Grid.Column="0" Grid.Row="7">Mercury</TextBlock>
+
+				<TextBlock Grid.Column="1" Grid.Row="0" Name="XamppCPVersion">Unknown</TextBlock>
+				<TextBlock Grid.Column="1" Grid.Row="1" Name="ApacheVersion">Unknown</TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="2" Name="PhpVersion">Unknown</TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="3" Name="MariaDbVersion">Unknown</TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="4" Name="PhpMyAdminVersion">Unknown</TextBlock>
+				<TextBlock Grid.Column="1" Grid.Row="5" Name="FileZillaVersion">Unknown</TextBlock>
+				<TextBlock Grid.Column="1" Grid.Row="6" Name="TomcatVersion">Unknown</TextBlock>
+				<TextBlock Grid.Column="1" Grid.Row="7" Name="MercuryVersion">Unknown</TextBlock>
+
+            </Grid>
+        </Grid>
+
+    </Grid>
+</Window>
