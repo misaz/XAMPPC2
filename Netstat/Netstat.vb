@@ -4,6 +4,7 @@ Imports System.Net.NetworkInformation
 ''' <summary>
 ''' Zjišťuje informace o síti
 ''' </summary>
+''' 
 Public Class Netstat
 
 	''' <summary>

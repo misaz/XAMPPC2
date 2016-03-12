@@ -10,6 +10,7 @@ Netstat
  <summary>
  Zjišťuje informace o síti
  </summary>
+ 
 </member>
 <member name="M:Netstat.Netstat.GetExtendedTcpTable(System.Byte[],System.Int32@,System.Boolean,System.Int32,Netstat.Netstat.TCP_TABLE_CLASS,System.Int32)">
  <summary>
